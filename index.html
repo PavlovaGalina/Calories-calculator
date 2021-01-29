@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="html-page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Счетчик калорий</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page">
+
+    <main class="page__main">
+      <h1 class="page__heading">Счетчик калорий</h1>
+      <section class="page__content calculator">
+        <form class="calculator__form form" action="index.html" method="post">
+          <fieldset class="form__sex">
+            <legend class="form__heading">Пол</legend>
+            <div class="form__sex-wrapper">
+              <input class="form__input-sex" type="radio" id="man" name="sex" value="man" checked>
+              <label class="form__label-sex" for="man">Мужской</label>
+              <input class="form__input-sex" type="radio" id="woman" name="sex" value="women">
+              <label class="form__label-sex" for="woman">Женский</label>
+            </div>
+          </fieldset>
+          <fieldset class="form__bio">
+            <legend class="visually-hidden">Показатели</legend>
+            <div class="form__bio-wrapper">
+              <div class="form__input-bio-wrapper">
+                <input class="form__input form__input--age" type="number" id="age" name="age" min="0">
+                <label class="form__heading" for="age">Возраст <span class="form__unit">лет</span></label>
+              </div>
+              <div class="form__input-bio-wrapper">
+                <input class="form__input form__input--height" type="number" id="height" name="height" min="0">
+                <label class="form__heading" for="height">Рост <span class="form__unit">см</span></label>
+              </div>
+              <div class="form__input-bio-wrapper">
+                <input class="form__input form__input--weight" type="number" id="weight" name="weight" min="0">
+                <label class="form__heading" for="weight">Вес <span class="form__unit">кг</span></label>
+              </div>
+            </div>
+            <p class="form__error"></p>
+          </fieldset>
+          <fieldset class="form__activity-options">
+            <legend class="form__heading">Физическая активность</legend>
+            <div class="form__activity-wrapper">
+              <div class="form__input-activity-wrapper">
+                <input class="form__input-activity visually-hidden" type="radio" id="min" name="activity" value="min">
+                <label class="form__label-activity" for="min">Минимальная</label>
+              </div>
+              <div class="form__input-activity-wrapper">
+                <input class="form__input-activity visually-hidden" type="radio" id="low" name="activity" value="low">
+                <label class="form__label-activity" for="low">Низкая</label>
+              </div>
+              <div class="form__input-activity-wrapper">
+                <input class="form__input-activity visually-hidden" type="radio" id="normal" name="activity" value="normal" checked>
+                <label class="form__label-activity" for="normal">Средняя</label>
+              </div>
+              <div class="form__input-activity-wrapper">
+                <input class="form__input-activity visually-hidden" type="radio" id="high" name="activity" value="high">
+                <label class="form__label-activity" for="high">Высокая</label>
+              </div>
+              <div class="form__input-activity-wrapper">
+                <input class="form__input-activity visually-hidden" type="radio" id="highest" name="activity" value="highest">
+                <label class="form__label-activity" for="highest">Очень высокая</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form__buttom-wrapper">
+            <button class="form__calculate-button" type="submit" name="button">Рассчитать</button>
+            <button class="form__reset-button" type="reset" name="button">Очистить поля и расчет</button>
+          </div>
+        </form>
+        <div class="calculator__result result">
+          <h2 class="result__heading">Ваша норма калорий</h2>
+          <ul class="result__list">
+            <li class="result__item">
+              <h3 class="result__item-header result__item-maintain-weight">?</h3>
+              <p class="result__item-description">поддержание веса</p>
+            </li>
+            <li class="result__item">
+              <h3 class="result__item-header result__item-lose-weight">?</h3>
+              <p class="result__item-description">снижение<br> веса</p>
+            </li>
+            <li class="result__item">
+              <h3 class="result__item-header result__item-gain-weight">?</h3>
+              <p class="result__item-description">набор<br> веса</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

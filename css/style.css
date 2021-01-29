@@ -1,0 +1,283 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --blue: #6C9EAB;
+  --dark-blue: #132C40;
+  --red: #FB565A;
+}
+
+.visually-hidden {
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.html-page {
+  font-family: 'Comfortaa', cursive;
+  background: url(../img/blueberries-background.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.page {
+  margin: 0;
+}
+
+.page__main {
+  width: 450px;
+  display: grid;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.page__heading {
+  font-size: 42px;
+  line-height: 1.5em;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 15px;
+}
+
+.form__heading {
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.form__sex {
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+
+.form__sex-wrapper {
+  width: 100%;
+  display: flex;
+  border: 2px solid var(--blue);
+  border-radius: 2px;
+}
+
+.form__label-sex {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--dark-blue);
+  text-align: center;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.form__input-sex:checked + .form__label-sex {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.form__input-sex {
+  display: none;
+}
+
+.form__bio {
+  border: none;
+  padding: 0;
+}
+
+.form__bio-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input-bio-wrapper {
+  display: grid;
+}
+
+.form__input-bio-wrapper:nth-child(2) {
+  margin-right: 35px;
+}
+
+.form__input {
+  width: 60px;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--dark-blue);
+  text-align: center;
+  border: 2px solid var(--blue);
+  border-radius: 2px;
+  padding: 5px 10px;
+  order: 2;
+}
+
+.form__input::-webkit-outer-spin-button,
+.form__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__unit {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--dark-blue);
+  opacity: 0.8;
+}
+
+.form__error {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--red);
+  margin: 0;
+}
+
+.form__activity-options {
+  border: none;
+  padding: 0;
+}
+
+.form__activity-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-left: 26px;
+}
+
+.form__label-activity {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.form__label-activity::before {
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: -24px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--dark-blue);
+  border-radius: 50%;
+}
+
+.form__input-activity:checked + .form__label-activity::after {
+  position: absolute;
+  content: "";
+  top: 1px;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+}
+
+.form__buttom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__calculate-button {
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 2px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.form__reset-button {
+  position: relative;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--red);
+  background-color: var(--transparent);
+  border: none;
+  padding-left: 27px;
+  cursor: pointer;
+}
+
+.form__reset-button::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/close-cross.svg);
+}
+
+/* Result */
+
+.result {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.result__heading {
+  font-size: 30px;
+  line-height: 1.5em;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0;
+}
+
+.result__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.result__item {
+  flex: 1;
+}
+
+.result__item-header {
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.result__item-description {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--darck-blue);
+  margin: 0;
+}
