@@ -55,7 +55,7 @@ calculateButton.addEventListener("click", function(evt) {
   }
 });
 
-resetButton.addEventListener("click", function(evt) {
+resetButton.onclick = function () {
   resultMaintain.textContent = '?';
   resultLose.textContent = '?';
   resultGain.textContent = '?';
