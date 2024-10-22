@@ -22,7 +22,7 @@ calculateButton.addEventListener("click", function(evt) {
 
   for (let i = 0; i < sex.length; i++) {
     if (sex[i].checked) {
-      personData.sexOption = (sex[i].value == "man") ? 5 : -161;
+      personData.sexOption = (sex[i].value == "man") ? 5 : 161;
     }
   }
 
